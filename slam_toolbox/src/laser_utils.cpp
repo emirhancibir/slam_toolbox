@@ -127,6 +127,9 @@ karto::LaserRangeFinder* LaserAssistant::makeLaser(const double& mountingYaw)
     max_laser_range = scan_.range_max;
   }
   laser->SetRangeThreshold(max_laser_range);
+  laser->SetNumberOfRangeReadings(scan_.ranges.size());
+  ROS_INFO("scan_.ranges.size() = %lu", scan_.ranges.size());
+  ROS_INFO("laser->GetNumberOfRangeReadings() = %u", laser->GetNumberOfRangeReadings());
   return laser;
 }
 

@@ -4178,6 +4178,12 @@ namespace karto
                                             kt_bool flipY = false) const;
 
   public:
+
+    void SetNumberOfRangeReadings(kt_int32u num_readings)
+    {
+      m_NumberOfRangeReadings = num_readings;
+    }
+    
     /**
      * Create a laser range finder of the given type and ID
      * @param type
@@ -4365,9 +4371,12 @@ namespace karto
     void Update()
     {
       int residual = 1;
+      std::cout << "360 LIDAR degel" << std::endl;
+
       if (GetIs360Laser()) 
       {
         // residual is 0 by 360 lidar conventions
+        std::cout << "360 LIDAR BU" << std::endl;
         residual = 0;
       }
       m_NumberOfRangeReadings = static_cast<kt_int32u>(math::Round((GetMaximumAngle() -

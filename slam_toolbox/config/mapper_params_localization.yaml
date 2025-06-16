@@ -9,12 +9,12 @@ ceres_loss_function: None
 # ROS Parameters
 odom_frame: odom
 map_frame: map
-base_frame: base_footprint
-scan_topic: /scan
-mode: mapping #localization
+base_frame: base
+scan_topic: /laserscan
+mode: localization
 
 # if you'd like to start localizing on bringup in a map and pose
-#map_file_name: test_steve
+map_file_name: /home/emir/Documents/map_05_06
 #map_start_pose: [5.0, 1.0, 0.0]
 
 debug_logging: false
