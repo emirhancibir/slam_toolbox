@@ -4,7 +4,7 @@ ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
 ceres_preconditioner: SCHUR_JACOBI
 ceres_trust_strategy: LEVENBERG_MARQUARDT
 ceres_dogleg_type: TRADITIONAL_DOGLEG
-ceres_loss_function: None
+ceres_loss_function: HuberLoss
 
 # ROS Parameters
 odom_frame: odom
@@ -14,7 +14,7 @@ scan_topic: /sick_safetyscanners2/scan
 mode: localization
 
 # if you'd like to start localizing on bringup in a map and pose
-map_file_name: /home/emir/t_sim_ws/map_zero
+map_file_name: /home/emir/t_sim_ws/map_zero_fabrika
 #map_start_pose: [5.0, 1.0, 0.0]
 
 debug_logging: true
